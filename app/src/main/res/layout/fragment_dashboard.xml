@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/preview_dashboard">
+
+    <include layout="@layout/layout_dashboard_gauges" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/gearbox_container"
+        style="@style/CardView"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="@dimen/car_standard_margin"
+        android:layout_marginRight="@dimen/car_standard_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/extra_card">
+
+        <ProgressBar
+            android:id="@+id/brake_accel_view"
+            style="@style/AppTheme.Car.ProgressBar.Horizontal"
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:max="10000"
+            android:orientation="vertical"
+            android:progress="3000"
+            android:progressTint="@color/car_primary"
+            android:rotation="180"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/gear_P"
+                style="@style/AppTheme.Car.Gear"
+                android:alpha="0.3"
+                android:text="P"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_R"
+                style="@style/AppTheme.Car.Gear"
+                android:text="R"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_P"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_N"
+                style="@style/AppTheme.Car.Gear"
+                android:text="N"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_R"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_1"
+                style="@style/AppTheme.Car.Gear"
+                android:text="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_N"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_2"
+                style="@style/AppTheme.Car.Gear"
+                android:text="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_3"
+                style="@style/AppTheme.Car.Gear"
+                android:text="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_4"
+                style="@style/AppTheme.Car.Gear"
+                android:text="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_3"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_5"
+                style="@style/AppTheme.Car.Gear"
+                android:text="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_4"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_6"
+                style="@style/AppTheme.Car.Gear"
+                android:text="6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_5"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/gear_7"
+                style="@style/AppTheme.Car.Gear"
+                android:text="7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/gear_6"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/extra_card"
+        style="@style/CardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/car_card_bottom_margin"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="@dimen/car_card_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.505">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/car_standard_margin">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:alpha="0.7"
+                android:background="@drawable/ic_oil"
+                android:backgroundTint="@color/car_primary"
+                android:gravity="center"
+                android:textColor="?android:attr/detailsElementBackground"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/oil_temp_view"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="80℃"
+                android:textAppearance="@style/CarBody2"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="12dp"
+                android:alpha="0.7"
+                android:background="@drawable/ic_gearbox"
+                android:backgroundTint="@color/car_primary"
+                android:gravity="center"
+                android:textColor="?android:attr/detailsElementBackground"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/gearbox_temp_view"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="40℃"
+                android:textAppearance="@style/CarBody2"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="12dp"
+                android:alpha="0.7"
+                android:background="@drawable/ic_battery"
+                android:backgroundTint="@color/car_primary"
+                android:gravity="center"
+                android:textColor="?android:attr/detailsElementBackground"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/battery_voltage_view"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="12.5 V"
+                android:textAppearance="@style/CarBody2"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

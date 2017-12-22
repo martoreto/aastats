@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/accent</item>
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.Car" parent="@style/CarAppTheme" tools:ignore="PrivateResource" />
+
+    <style name="AppTheme.Car.Gear">
+        <item name="android:textColor">@color/car_body1_inverted</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:background">@drawable/rounded_rect</item>
+        <item name="android:backgroundTint">@color/gear_indicator_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="AppTheme.Car.Speedometer">
+        <item name="sv_markColor">@android:color/transparent</item>
+        <item name="sv_indicatorColor">@color/car_accent</item>
+        <item name="sv_indicatorWidth">8dp</item>
+        <item name="sv_lowSpeedColor">@color/car_primary</item>
+        <item name="sv_lowSpeedPercent">85</item>
+        <item name="sv_highSpeedColor">@color/car_accent</item>
+        <item name="sv_mediumSpeedColor">@color/car_primary</item>
+        <item name="sv_mediumSpeedPercent">85</item>
+        <item name="sv_speedTextColor">@color/car_primary</item>
+        <item name="sv_speedTextSize">32sp</item>
+        <item name="sv_speedometerWidth">16dp</item>
+        <item name="sv_textColor">@color/car_primary</item>
+        <item name="sv_textSize">12sp</item>
+        <item name="sv_unitSpeedInterval">4dp</item>
+        <item name="sv_unitTextColor">@color/car_primary</item>
+        <item name="sv_unitTextSize">12sp</item>
+        <item name="sv_unitUnderSpeedText">true</item>
+        <item name="sv_withTremble">false</item>
+    </style>
+
+    <style name="AppTheme.Car.ProgressBar.Horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_vertical_material_car</item>
+        <item name="android:minWidth">@dimen/progress_bar_height_material_car</item>
+        <item name="android:maxWidth">@dimen/progress_bar_height_material_car</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">480dp</item>
+    </style>
+</resources>

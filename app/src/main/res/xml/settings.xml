@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_notifications_category_title">
+        <CheckBoxPreference
+            android:key="oilTempMonitoringActive"
+            android:title="@string/pref_oil_temp_monitoring_title"
+            android:summary="@string/pref_oil_temp_monitoring_summary"
+            android:defaultValue="true"
+            />
+        <EditTextPreference
+            android:key="oilTempThreshold"
+            android:title="@string/pref_oil_temp_threshold_title"
+            android:defaultValue="70"
+            android:dialogTitle="@string/pref_oil_temp_threshold_title"
+            android:inputType="number"
+            android:dependency="oilTempMonitoringActive"
+            />
+        <CheckBoxPreference
+            android:key="wheelStateMonitoringActive"
+            android:title="@string/pref_wheel_state_monitoring_title"
+            android:summary="@string/pref_wheel_state_monitoring_summary"
+            android:defaultValue="false"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_providers_category_title">
+        <Preference
+            android:key="listProviders"
+            android:title="@string/pref_list_providers_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_logging_category_title">
+        <CheckBoxPreference
+            android:key="statsLoggingActive"
+            android:title="@string/pref_stats_logging_title"
+            android:summary="@string/pref_stats_logging_summary"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="uploadToBigquery"
+            android:title="@string/pref_upload_to_bigquery_title"
+            android:dependency="statsLoggingActive"
+            android:defaultValue="false" />
+        <Preference
+            android:key="accountName"
+            android:dependency="uploadToBigquery"
+            android:title="@string/pref_choose_account_title" />
+        <EditTextPreference
+            android:key="bigqueryProjectId"
+            android:dependency="uploadToBigquery"
+            android:title="@string/pref_bigquery_project_id_title" />
+        <EditTextPreference
+            android:key="bigqueryDataset"
+            android:dependency="uploadToBigquery"
+            android:title="@string/pref_bigquery_dataset_title" />
+        <EditTextPreference
+            android:key="bigqueryTable"
+            android:dependency="uploadToBigquery"
+            android:title="@string/pref_bigquery_table_title"
+            android:defaultValue="@string/pref_bigquery_table_default"/>
+        <Preference
+            android:key="bigqueryReuploadLast"
+            android:dependency="uploadToBigquery"
+            android:title="@string/pref_bigquery_reupload_last_title" />
+        <Preference
+            android:key="kickUploads"
+            android:dependency="uploadToBigquery"
+            android:title="@string/pref_kick_uploads_title" />
+    </PreferenceCategory>
+</PreferenceScreen>
