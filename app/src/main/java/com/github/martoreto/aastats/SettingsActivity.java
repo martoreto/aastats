@@ -33,6 +33,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     static final String EXTRA_AUTHORIZATION_INTENT = "authorizationRequest";
 
+    private static final String PERMISSION_CAR_VENDOR_EXTENSION = "com.google.android.gms.permission.CAR_VENDOR_EXTENSION";
+
     private GoogleAccountCredential mCredential;
     private Intent mCurrentAuthorizationIntent;
 
@@ -73,6 +75,10 @@ public class SettingsActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             permissionsToRequest.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+        if (ContextCompat.checkSelfPermission(this, PERMISSION_CAR_VENDOR_EXTENSION)
+                != PackageManager.PERMISSION_GRANTED) {
+            permissionsToRequest.add(PERMISSION_CAR_VENDOR_EXTENSION);
         }
         if (!permissionsToRequest.isEmpty()) {
             ActivityCompat.requestPermissions(this,
