@@ -68,8 +68,8 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
 
         List<String> permissionsToRequest = new ArrayList<>();
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -145,7 +145,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         switch (requestCode) {
             case REQUEST_ACCOUNTS_PERMISSION:
-                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     chooseAccountIfNeeded();
                 } else {
                     SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
