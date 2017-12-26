@@ -13,7 +13,7 @@
     <string name="pref_bigquery_project_id_title">Project ID</string>
     <string name="pref_bigquery_dataset_title">Dataset name</string>
     <string name="pref_bigquery_table_title">Table name</string>
-    <string name="pref_bigquery_table_default" translatable="false">aaplus</string>
+    <string name="pref_bigquery_table_default" translatable="false">aastats</string>
     <string name="pref_kick_uploads_title">Upload data now</string>
     <string name="kick_uploads_nothing_to_do">All uploads already completed.</string>
     <string name="kick_uploads_done">Uploads sheduled.</string>
