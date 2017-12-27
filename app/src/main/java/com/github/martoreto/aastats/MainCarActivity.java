@@ -8,7 +8,7 @@ import com.google.android.apps.auto.sdk.CarUiController;
 import com.google.android.apps.auto.sdk.MenuController;
 import com.google.android.apps.auto.sdk.StatusBarController;
 
-class MainCarActivity extends CarActivity {
+public class MainCarActivity extends CarActivity {
     private static final String TAG = "MainCarActivity";
 
     @Override
