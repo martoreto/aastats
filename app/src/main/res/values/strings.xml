@@ -35,4 +35,7 @@
     <string name="pref_providers_category_title">Telemetry providers</string>
     <string name="pref_list_providers_title">List providers</string>
     <string name="providers">Telemetry providers</string>
+    <string name="notification_channel_name">Car</string>
+    <string name="notification_channel_description">Notifications displayed in Android Auto.</string>
+    <string name="service_notification_text">Logging is active.</string>
 </resources>
