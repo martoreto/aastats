@@ -22,6 +22,12 @@ public abstract class CarModeService extends Service {
     }
 
     @Override
+    public void onDestroy() {
+        unregisterReceiver(mBroadcastReceiver);
+        super.onDestroy();
+    }
+
+    @Override
     @CallSuper
     public int onStartCommand(Intent intent, int flags, int startId) {
         UiModeManager uiModeManager = (UiModeManager) getSystemService(Context.UI_MODE_SERVICE);
