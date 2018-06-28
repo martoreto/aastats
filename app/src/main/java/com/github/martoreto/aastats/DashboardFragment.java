@@ -200,6 +200,11 @@ public class DashboardFragment extends CarFragment {
             mLastMeasurements.putAll(values);
             postUpdate();
         }
+
+        @Override
+        public void onSchemaChanged() {
+            // do nothing
+        }
     };
 
     private void postUpdate() {

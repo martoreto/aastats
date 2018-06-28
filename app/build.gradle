@@ -24,9 +24,9 @@ configurations.all {
 
 dependencies {
     compile 'com.github.martoreto:aauto-sdk:v4.5'
-    compile 'com.github.martoreto:aauto-vex-base:v3.1'
+    compile 'com.github.martoreto:aauto-vex-base:v4.3'
 
-    compile('com.google.apis:google-api-services-bigquery:v2-rev352-1.22.0') exclude module: 'httpclient'
+    compile('com.google.apis:google-api-services-bigquery:v2-rev377-1.22.0') exclude module: 'httpclient'
     compile 'com.google.api-client:google-api-client-android:1.22.0' exclude module: 'httpclient'
     compile 'com.google.http-client:google-http-client-gson:1.22.0' exclude module: 'httpclient'
 

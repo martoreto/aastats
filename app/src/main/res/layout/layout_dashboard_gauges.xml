@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="0dp"
     android:layout_height="0dp"
@@ -37,8 +37,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="0.4"
         app:sv_indicatorWidth="4dp"
         app:sv_maxSpeed="2"
@@ -49,10 +52,7 @@
         app:sv_textColor="@android:color/transparent"
         app:sv_unit="bar"
         app:sv_unitSpeedInterval="0dp"
-        app:sv_unitTextSize="8sp"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="0dp" />
+        app:sv_unitTextSize="8sp" />
 
     <com.github.anastr.speedviewlib.SpeedView
         android:id="@+id/output_torque_view"
@@ -79,6 +79,6 @@
         app:layout_constraintLeft_toLeftOf="@+id/charging_pressure_view"
         app:layout_constraintRight_toRightOf="@+id/charging_pressure_view"
         app:layout_constraintTop_toTopOf="@+id/output_torque_view"
-        tools:visibility="gone"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        tools:visibility="gone" />
 </android.support.constraint.ConstraintLayout>
